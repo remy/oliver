@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Probot: Oliver (Twist)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+<body>
+  <h1><span class="light">Probot:</span> OliverBot <img width="32" src="please.png"></h1>
+  <p>A GitHub App built with <a href="https://github.com/probot/probot">Probot</a> that replies to closed bugs with a <em>Please…can I have more…?</em> — ala Oliver Twist</p>
+
+  <img src="/example.png">
+  <h2>Usage</h2>
+<ol>
+<li><strong><a href="https://github.com/apps/oliverbot">Configure the GitHub App</a></strong></li>
+<li>Create <code>.github/oliver.yml</code> based on the following template</li>
+<li>It will start replying to newly closed bugs.</li>
+</ol>
+<p>A <code>.github/oliver.yml</code> file is required to enable the plugin. The file can be empty, or it can override any of these default settings:</p>
+<pre><code class="language-yml"># Configuration for oliver - <a href="https://github.com/remy/oliver">https://github.com/remy/oliver</a>
+
+# Number of days the issue was closed in before the bot should reply.
+# If the issue was closed in more days than this, the bot won't reply.
+# Use `daysClosedIn: false` to *always* reply.
+daysClosedIn: 5
+
+# Labels to look for on issues the bot can reply to
+labels:
+  - bug
+
+# Comment to post when replying
+comment: &gt;
+  Thanks for raising this issue. If you're happy with how it was handled,
+  maybe you could star this repo by way of thanks 👍
+</code></pre>
+</body>
+</html>

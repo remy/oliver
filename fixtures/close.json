@@ -1,15 +1,15 @@
 {
   "action": "closed",
   "issue": {
-    "url": "https://api.github.com/repos/remy/github-integration-testing/issues/6",
+    "url": "https://api.github.com/repos/remy/github-integration-testing/issues/7",
     "repository_url": "https://api.github.com/repos/remy/github-integration-testing",
-    "labels_url": "https://api.github.com/repos/remy/github-integration-testing/issues/6/labels{/name}",
-    "comments_url": "https://api.github.com/repos/remy/github-integration-testing/issues/6/comments",
-    "events_url": "https://api.github.com/repos/remy/github-integration-testing/issues/6/events",
-    "html_url": "https://github.com/remy/github-integration-testing/issues/6",
-    "id": 288145760,
-    "number": 6,
-    "title": "Another one",
+    "labels_url": "https://api.github.com/repos/remy/github-integration-testing/issues/7/labels{/name}",
+    "comments_url": "https://api.github.com/repos/remy/github-integration-testing/issues/7/comments",
+    "events_url": "https://api.github.com/repos/remy/github-integration-testing/issues/7/events",
+    "html_url": "https://github.com/remy/github-integration-testing/issues/7",
+    "id": 288174850,
+    "number": 7,
+    "title": "Wonder if this is a good bug?",
     "user": {
       "login": "remy",
       "id": 13700,
@@ -46,11 +46,11 @@
     ],
     "milestone": null,
     "comments": 1,
-    "created_at": "2018-01-12T15:01:10Z",
-    "updated_at": "2018-01-12T15:01:23Z",
-    "closed_at": "2018-01-12T15:01:23Z",
+    "created_at": "2018-01-12T16:31:30Z",
+    "updated_at": "2018-01-12T16:31:54Z",
+    "closed_at": "2018-01-12T16:31:54Z",
     "author_association": "OWNER",
-    "body": "What a strange thing!\r\nto be alive\r\nbeneath cherry blossoms."
+    "body": "Now gathering,\r\n\r\nNow scattering,\r\n\r\nFireflies over the river."
   },
   "repository": {
     "id": 113596665,
@@ -124,7 +124,7 @@
     "clone_url": "https://github.com/remy/github-integration-testing.git",
     "svn_url": "https://github.com/remy/github-integration-testing",
     "homepage": null,
-    "size": 4,
+    "size": 5,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": null,

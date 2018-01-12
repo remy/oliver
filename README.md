@@ -1,8 +1,8 @@
 # Probot: Oliver
 
-> a GitHub App built with [Probot](https://github.com/probot/probot) that replies to closed bugs with "Please…can I have more…?" - ala Oliver Twist
+> A GitHub App built with [Probot](https://github.com/probot/probot) that replies to closed bugs with "Please…can I have more…?" - ala Oliver Twist
 
-[![](https://cloud.githubusercontent.com/assets/173/23858697/4885f0d6-07cf-11e7-96ed-716948027bbc.png)](https://github.com/probot/demo/issues/2)
+[![](https://oliver.isthe.link/example.png)](https://github.com/remy/github-integration-testing/issues/7)
 
 ## Usage
 

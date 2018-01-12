@@ -1,6 +1,11 @@
 const diff = require('date-fns/difference_in_calendar_days');
 
 module.exports = robot => {
+  const app = robot.route('/');
+
+  // Use any middleware
+  app.use(require('express').static('docs'));
+
   robot.on('issues.closed', async context => {
     if (context.isBot) {
       return;
@@ -13,8 +18,6 @@ module.exports = robot => {
     }
 
     config = { ...require('./defaults'), ...config };
-
-    robot.log(config);
 
     // Some payloads don't include labels
     // sometimes labels are missing https://git.io/vNGnz
@@ -48,19 +51,19 @@ module.exports = robot => {
       return;
     }
 
-    // const delta = diff(issue.created_at, issue.closed_at);
-    const delta = diff(issue.closed_at, '2018-01-10T00:01:10Z');
+    const delta = diff(issue.closed_at, issue.created_at);
 
-    if (config.daysClosedIn > delta) {
+    if (delta > config.daysClosedIn) {
       if (config.daysClosedIn !== false) {
-        robot.log(`too long (${delta}), not replying`);
+        robot.log(`too long (${config.daysClosedIn} > ${delta}), not replying`);
         return;
       }
     }
 
+    const params = context.issue({ body: config.comment });
+    robot.log(`✔️ ${params.owner}/${params.repo}`);
+
     // 3. how long until it was closed, is that inside the time frame?
-    context.github.issues.createComment(
-      context.issue({ body: config.comment })
-    );
+    context.github.issues.createComment(params);
   });
 };

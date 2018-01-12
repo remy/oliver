@@ -5,9 +5,17 @@
   "author": "Remy Sharp <remy@remysharp.com> (https://remysharp.com)",
   "license": "MIT",
   "repository": "https://github.com/remy/oliver.git",
+  "now": {
+    "alias": "oliver.isthe.link",
+    "env": {
+      "PRIVATE_KEY": "@oliver-private-key"
+    }
+  },
   "scripts": {
     "start": "probot run ./index.js",
-    "test": "jest"
+    "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) probot run ./index.js",
+    "test": "jest",
+    "deploy": "now -E .env -e NODE_ENV=production && now alias"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
