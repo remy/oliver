@@ -52,8 +52,10 @@ module.exports = robot => {
     const delta = diff(issue.closed_at, '2018-01-10T00:01:10Z');
 
     if (config.daysClosedIn > delta) {
-      robot.log(`too long (${delta}), not replying`);
-      return;
+      if (config.daysClosedIn !== false) {
+        robot.log(`too long (${delta}), not replying`);
+        return;
+      }
     }
 
     // 3. how long until it was closed, is that inside the time frame?
